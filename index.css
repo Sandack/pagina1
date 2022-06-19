@@ -1,90 +1,148 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppin:wght@700&display=swap');
-  
 
-  body{
-      margin: 0;
-      font-family:'Poppins' ;
-      background-color:#d2d5e3cc;
-  }
-  .container{
-      align-items: center;
-      margin-top: 5px;
-      margin-inline: 10%;
-      max-width: 400px;
-  }
-  .img-container{
-      margin: auto;
-  }
-  header .container{
-      background-color:#d2d5e3cc;;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-      margin: 5px;
-      font-family: "Bookman Old Style";
-      font-size: 150%;
-      box-shadow: 2px 2px 10px black;
-      width: 300px;
-      height: 40px;
-  }
-  
-  #hero{
-      margin: 5px;
-      width: 100vh;
-      height: 110vh;
-      background-image: url(foto.jpg);
-      background-image: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+header .container {
+    background-color: #d2d5e3cc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 5px;
+    font-family: "Bookman Old Style";
+    font-size: 150%;
+    box-shadow: 2px 2px 10px black;
+    width: 600px;
+    height: 40px;
+    position: fixed;
+}
 
-  }
-  #hero .container{  
-      display: flex;
-      width: 450px;
-  }
-  
-  #hero .texto{
-      color: rgb(255, 255, 255);
-      font-weight: bold;
-  }
-  
-  p{  font-size: 1.5em;
-      box-shadow: 2px 2px 10px black;
-      background-color: rgba(0, 0, 255, 0.128);
-  }
-  
-  h1{ 
-      position: relative;
-      font-size: 25px;
-      color: #d2d5e3cc;   
-      -webkit-text-stroke: 0.1vw #d2d5e3cc;
-  
-  }
-  h1::before
-  {
-      content: attr(data-text);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      color: #000000;
-      -webkit-text-stroke: 0vw #383d52;
-      overflow: hidden;
-      animation: animate 5s linear infinite;
-  }
-  
-  @keyframes animate
-   {
-      0%,10%,100%
-      {
-          width: 0%;
-      }
-      70%,90%
-      {
-          width: 100%;
-      }
-      
-  }
+body {
+    margin: 0;
+    font-family: 'Poppins';
+    background-color: #d2d5e3cc;
+}
+
+#hero {}
+
+#hero .container {}
+
+#hero .texto {
+    margin-top: 15px;
+    color: #d2d5e3cc;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 5px;
+}
+
+#hero .slider {
+    width: 100%;
+    margin: 5px;
+    overflow: hidden;
+}
+
+#hero .slider ul {
+    display: flex;
+    padding: 0;
+    width: 900%;
+    animation: cambio 45s infinite;
+}
+
+#hero .slider li {
+    width: 100%;
+    list-style: none;
+}
+.slider img{
+    width: 100%;
+    height: 95vh;
+}
+.slider p{
+    width: 200px;
+    box-shadow: #000000;
+}
+
+/*.container {
+    padding: auto;
+    align-items: center;
+    margin-top: 5px;
+    margin-inline: 10%;
+    width: 400px;
+}*/
+
+.img-container {
+    margin: auto;
+}
+
+p {
+    font-size: 1.5em;
+    box-shadow: 2px 2px 10px black;
+    background-color: rgba(0, 0, 255, 0.128);
+}
+.container1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    position: relative;
+    font-size: 25px;
+    color:  #d2d5e3cc;
+    -webkit-text-stroke: 0.0vw #d2d5e3cc;
+
+}
+
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #000000;
+    -webkit-text-stroke: 0vw  #d2d5e3cc;;
+    overflow: hidden;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+
+    0%,
+    10%,
+    100% {
+        width: 0%;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+
+}
+@keyframes cambio{
+    0%{margin-left:0 ;}
+    9%{margin-left:0 ;}
+
+    11%{margin-left: -100%;}
+    19%{margin-left: -100%;}
+
+    21%{margin-left: -200%;}
+    29%{margin-left: -200%;}
+
+    31%{margin-left: -300%;}
+    39%{margin-left: -300%;}
+
+    41%{margin-left: -400%;}
+    49%{margin-left: -400%;}
+
+    51%{margin-left: -500%;}
+    59%{margin-left: -500%;}
+
+    61%{margin-left: -600%;}
+    69%{margin-left: -600%;}
+
+    71%{margin-left: -700%;}
+    79%{margin-left: -700%;}
+
+    81%{margin-left: -800%;}
+    89%{margin-left: -800%;}
+}
