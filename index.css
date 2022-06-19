@@ -43,7 +43,7 @@ body {
 #hero .slider ul {
     display: flex;
     padding: 0;
-    width: 900%;
+    width: 1000%;
     animation: cambio 45s infinite;
 }
 
